@@ -1,0 +1,133 @@
+﻿
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.fonts-icon .btn-primary{
+    background-color:#fff;
+    border-radius:30px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    width:100%;
+    font-family: 'Montserrat', sans-serif;
+    border-color:rgb(0,153,153);
+    color:rgb(0,153,153);
+}
+
+.fonts-icon{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.fonts-icon i{
+    height:30px;
+    width:30px;
+    border-radius:50%;
+    margin-right:15px;
+    background-color:rgb(0,153,153);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:#fff;
+}
+
+.form-control{
+    border-top-right-radius:20px !important;
+    border-bottom-right-radius:20px !important;
+    border-color:rgb(0,153,153);
+}
+
+.input-group{
+    font-family: 'Montserrat', sans-serif;
+}
+
+#GridviewLeadTable{
+    font-family: 'Montserrat', sans-serif;
+}
+
+.ddl{
+
+}
+
+.head-box{
+    margin-bottom:50px;
+    margin-top:50px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.admin-head{
+    font-size:35px;
+    text-transform:uppercase;
+    color:rgb(19, 92, 92);
+    font-weight:700;
+}
+
+.button-details{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin-bottom:40px;
+}
+
+.admin-button{
+    height:60px;
+    width:200px;
+    background-color:rgb(0,153,153);
+    color:white;
+    border:none;
+    border-radius:12px;
+    font-size:20px;
+    font-weight:600;
+    text-transform:uppercase;
+    box-shadow:0 5px 8px rgba(0,0,0,.3);
+}
+
+#gv_Dump{
+    text-align:center;
+    font-size:15px;
+}
+
+
+.edit-title{
+    text-transform:capitalize;
+    font-size:25px;
+    margin:30px;
+    margin-bottom:60px;
+    text-align:center;
+    font-weight:400;
+}
+
+.edit-page-btn{
+    height:50px;
+    width:130px;
+    color:white;
+    font-size:18px;
+    border:none;
+    text-transform:uppercase;
+    font-weight:600;
+    border-radius:12px;
+    margin-top:30px;
+}
+
+.btn-save{
+    background-color:#00a403;
+}
+
+.btn-cancel{
+    background-color:#ca1d1d;
+}
+
+.btn-black{
+    background-color:#343434;
+}
+
+.proj-label{
+    font-size:20px;
+    font-weight:500;
+    text-align:center;
+    padding-left:20px;
+    text-transform:uppercase;
+    color:rgb(19, 92, 92);
+}
