@@ -60,6 +60,7 @@ namespace GPSEForecast
                             drp_tradingpartner.SelectedValue = (read["Trading Partner"].ToString());
                             drp_CPM.SelectedValue = (read["CPM"].ToString());
                             //drp_CPM1.SelectedValue = (read["CPM"].ToString());
+                            drp_PartnerDepthStructure.SelectedValue = (read["Partner PC"].ToString());
                             string c = drp_CPM.SelectedItem.Value;
                             // txt = (read["Partner PC"].ToString());
                             drp_ProfitCenter.SelectedValue = (read["Profit Center"].ToString());
@@ -99,6 +100,7 @@ namespace GPSEForecast
 
                 //      getCountry();
                 string d = drp_CPM.SelectedItem.Value;
+
             }
         }
 
@@ -137,6 +139,10 @@ namespace GPSEForecast
             drp_Project.Items.Insert(0, new ListItem("Project", ""));
             
             drp_tradingpartner.Items.Insert(0, new ListItem("Country", ""));
+
+            drp_PartnerDepthStructure.DataSource = returnDrp("Partner_Depth_Structure");
+            drp_PartnerDepthStructure.DataBind();
+            drp_PartnerDepthStructure.Items.Insert(0, new ListItem("Partner Depth Structure", ""));
 
             //drp_Project.DataSource = returnDrp("Project");
             //drp_Project.DataBind();
@@ -301,6 +307,7 @@ namespace GPSEForecast
                 cmd.Parameters.AddWithValue("@gck", drp_GCK.SelectedItem.Value);
                 cmd.Parameters.AddWithValue("@bf", drp_businessfield.SelectedItem.Value);
                 cmd.Parameters.AddWithValue("@tp", drp_tradingpartner.SelectedItem.Value);
+                cmd.Parameters.AddWithValue("@partnerpc", drp_PartnerDepthStructure.SelectedItem.Value);
                 cmd.Parameters.AddWithValue("@cmt", txt_comments.Text);
 
                 cmd.CommandType = System.Data.CommandType.StoredProcedure;
@@ -321,6 +328,7 @@ namespace GPSEForecast
                 cmd.Parameters.AddWithValue("@pc", drp_ProfitCenter.SelectedItem.Value);
                 cmd.Parameters.AddWithValue("@gck", drp_GCK.SelectedItem.Value);
                 cmd.Parameters.AddWithValue("@bf", drp_businessfield.SelectedItem.Value);
+                cmd.Parameters.AddWithValue("@partnerpc", drp_PartnerDepthStructure.SelectedItem.Value);
                 cmd.Parameters.AddWithValue("@tp", drp_tradingpartner.SelectedItem.Value);
                 cmd.Parameters.AddWithValue("@cmt", txt_comments.Text);
 

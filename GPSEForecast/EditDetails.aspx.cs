@@ -23,6 +23,7 @@ namespace GPSEForecast
             {
                 lbl_Proj.Text = Request.QueryString["Project"];
                 lbl_ProjName.Text = Request.QueryString["ProjectName"];
+                getMoth();
             }
 
         }
@@ -52,6 +53,7 @@ namespace GPSEForecast
                 cmd.Parameters.AddWithValue("@order", txt_order.Text);
                 cmd.Parameters.AddWithValue("@cost", txt_Cost.Text);
                 cmd.Parameters.AddWithValue("@accural", txt_accrual.Text);
+                cmd.Parameters.AddWithValue("@margin", txt_margin.Text);
                 cmd.Parameters.AddWithValue("@comments", txt_notes.Text);
 
                 cmd.CommandType = System.Data.CommandType.StoredProcedure;
@@ -61,6 +63,7 @@ namespace GPSEForecast
                 txt_order.Text = "";
                 txt_Cost.Text = "";
                 txt_accrual.Text = "";
+                txt_margin.Text = "";
                 txt_notes.Text = "";
                 drp_fy.SelectedValue = "Choose FY";
                 drp_Month.SelectedValue = "Choose Month";
@@ -85,5 +88,32 @@ namespace GPSEForecast
 
 
         }
+
+        public List<String> getMoth()
+        {
+
+
+            int mo = int.Parse(DateTime.Now.Month.ToString());
+            if (mo > 9)
+            {
+                mo = mo - 9;
+            }
+            else
+            {
+                mo = mo + 3;
+            }
+            string mo1 = mo.ToString();
+
+            lbl_Period.Text = mo1;
+
+            var getMoth = new List<string>()
+                    {
+                        mo1
+
+                    };
+
+            return getMoth;
+        }
+
     }
 }

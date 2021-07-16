@@ -69,6 +69,24 @@ namespace GPSEForecast
         protected global::System.Web.UI.WebControls.Label lbl_ProjName;
 
         /// <summary>
+        /// Label3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label3;
+
+        /// <summary>
+        /// lbl_Period control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbl_Period;
+
+        /// <summary>
         /// drp_fy control.
         /// </summary>
         /// <remarks>
@@ -112,6 +130,15 @@ namespace GPSEForecast
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txt_accrual;
+
+        /// <summary>
+        /// txt_margin control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txt_margin;
 
         /// <summary>
         /// txt_notes control.

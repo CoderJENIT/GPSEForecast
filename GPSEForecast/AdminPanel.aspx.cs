@@ -71,6 +71,7 @@ namespace GPSEForecast
 
                 con.Open();
                 cmd.ExecuteNonQuery();
+                Response.Write("<script>alert('Carry Over Successfully')</script>");
             }
         }
 

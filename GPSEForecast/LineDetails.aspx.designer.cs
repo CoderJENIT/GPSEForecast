@@ -69,6 +69,24 @@ namespace GPSEForecast
         protected global::System.Web.UI.WebControls.Label lbl_ProjName;
 
         /// <summary>
+        /// Label3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label3;
+
+        /// <summary>
+        /// lbl_Period control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbl_Period;
+
+        /// <summary>
         /// Button1 control.
         /// </summary>
         /// <remarks>
@@ -132,6 +150,15 @@ namespace GPSEForecast
         protected global::System.Web.UI.WebControls.TextBox TextBox_Accurals_1;
 
         /// <summary>
+        /// TextBox_Margin_1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TextBox_Margin_1;
+
+        /// <summary>
         /// TextBox_FY_2 control.
         /// </summary>
         /// <remarks>
@@ -175,6 +202,15 @@ namespace GPSEForecast
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TextBox_Accurals_2;
+
+        /// <summary>
+        /// TextBox_Margin_2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TextBox_Margin_2;
 
         /// <summary>
         /// TextBox_FY_3 control.
@@ -222,6 +258,15 @@ namespace GPSEForecast
         protected global::System.Web.UI.WebControls.TextBox TextBox_Accurals_3;
 
         /// <summary>
+        /// TextBox_Margin_3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TextBox_Margin_3;
+
+        /// <summary>
         /// TextBox_FY_4 control.
         /// </summary>
         /// <remarks>
@@ -265,6 +310,15 @@ namespace GPSEForecast
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TextBox_Accurals_4;
+
+        /// <summary>
+        /// TextBox_Margin_4 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TextBox_Margin_4;
 
         /// <summary>
         /// TextBox_FY_5 control.
@@ -312,6 +366,15 @@ namespace GPSEForecast
         protected global::System.Web.UI.WebControls.TextBox TextBox_Accurals_5;
 
         /// <summary>
+        /// TextBox_Margin_5 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TextBox_Margin_5;
+
+        /// <summary>
         /// TextBox_FY_6 control.
         /// </summary>
         /// <remarks>
@@ -355,6 +418,15 @@ namespace GPSEForecast
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TextBox_Accurals_6;
+
+        /// <summary>
+        /// TextBox_Margin_6 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TextBox_Margin_6;
 
         /// <summary>
         /// TextBox_FY_7 control.
@@ -402,6 +474,15 @@ namespace GPSEForecast
         protected global::System.Web.UI.WebControls.TextBox TextBox_Accurals_7;
 
         /// <summary>
+        /// TextBox_Margin_7 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TextBox_Margin_7;
+
+        /// <summary>
         /// TextBox_FY_8 control.
         /// </summary>
         /// <remarks>
@@ -445,6 +526,15 @@ namespace GPSEForecast
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TextBox_Accurals_8;
+
+        /// <summary>
+        /// TextBox_Margin_8 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TextBox_Margin_8;
 
         /// <summary>
         /// TextBox_FY_9 control.
@@ -492,6 +582,15 @@ namespace GPSEForecast
         protected global::System.Web.UI.WebControls.TextBox TextBox_Accurals_9;
 
         /// <summary>
+        /// TextBox_Margin_9 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TextBox_Margin_9;
+
+        /// <summary>
         /// TextBox_FY_10 control.
         /// </summary>
         /// <remarks>
@@ -535,6 +634,15 @@ namespace GPSEForecast
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TextBox_Accurals_10;
+
+        /// <summary>
+        /// TextBox_Margin_10 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TextBox_Margin_10;
 
         /// <summary>
         /// TextBox_FY_11 control.
@@ -582,6 +690,15 @@ namespace GPSEForecast
         protected global::System.Web.UI.WebControls.TextBox TextBox_Accurals_11;
 
         /// <summary>
+        /// TextBox_Margin_11 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TextBox_Margin_11;
+
+        /// <summary>
         /// TextBox_FY_12 control.
         /// </summary>
         /// <remarks>
@@ -625,6 +742,15 @@ namespace GPSEForecast
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TextBox_Accurals_12;
+
+        /// <summary>
+        /// TextBox_Margin_12 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TextBox_Margin_12;
 
         /// <summary>
         /// TextBox_FY_13 control.
@@ -672,6 +798,15 @@ namespace GPSEForecast
         protected global::System.Web.UI.WebControls.TextBox TextBox_Accurals_13;
 
         /// <summary>
+        /// TextBox_Margin_13 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TextBox_Margin_13;
+
+        /// <summary>
         /// TextBox_FY_14 control.
         /// </summary>
         /// <remarks>
@@ -715,6 +850,15 @@ namespace GPSEForecast
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TextBox_Accurals_14;
+
+        /// <summary>
+        /// TextBox_Margin_14 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TextBox_Margin_14;
 
         /// <summary>
         /// TextBox_FY_15 control.
@@ -762,6 +906,15 @@ namespace GPSEForecast
         protected global::System.Web.UI.WebControls.TextBox TextBox_Accurals_15;
 
         /// <summary>
+        /// TextBox_Margin_15 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TextBox_Margin_15;
+
+        /// <summary>
         /// TextBox_FY_16 control.
         /// </summary>
         /// <remarks>
@@ -805,6 +958,15 @@ namespace GPSEForecast
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TextBox_Accurals_16;
+
+        /// <summary>
+        /// TextBox_Margin_16 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TextBox_Margin_16;
 
         /// <summary>
         /// TextBox_FY_17 control.
@@ -852,6 +1014,15 @@ namespace GPSEForecast
         protected global::System.Web.UI.WebControls.TextBox TextBox_Accurals_17;
 
         /// <summary>
+        /// TextBox_Margin_17 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TextBox_Margin_17;
+
+        /// <summary>
         /// TextBox_FY_18 control.
         /// </summary>
         /// <remarks>
@@ -895,6 +1066,15 @@ namespace GPSEForecast
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TextBox_Accurals_18;
+
+        /// <summary>
+        /// TextBox_Margin_18 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TextBox_Margin_18;
 
         /// <summary>
         /// TextBox_FY_19 control.
@@ -942,6 +1122,15 @@ namespace GPSEForecast
         protected global::System.Web.UI.WebControls.TextBox TextBox_Accurals_19;
 
         /// <summary>
+        /// TextBox_Margin_19 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TextBox_Margin_19;
+
+        /// <summary>
         /// TextBox_FY_20 control.
         /// </summary>
         /// <remarks>
@@ -985,5 +1174,14 @@ namespace GPSEForecast
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TextBox_Accurals_20;
+
+        /// <summary>
+        /// TextBox_Margin_20 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TextBox_Margin_20;
     }
 }

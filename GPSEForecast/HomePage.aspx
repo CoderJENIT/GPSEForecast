@@ -105,12 +105,12 @@
                           <asp:DropDownList runat="server" ID="drp_tradingpartner" class="custom-select">   </asp:DropDownList>
                       </div>
 
-                    <%--<div class="input-group input-group-sm mb-2">
+                    <div class="input-group input-group-sm mb-2">
                           <div class="input-group-prepend">
-                            <div class="input-group-text">Partner Depth Structure</div>
+                            <div class="input-group-text">Partner PC</div>
                           </div>
                           <asp:DropDownList runat="server" ID="drp_PartnerDepthStructure" class="custom-select">   </asp:DropDownList>
-                      </div>--%>
+                      </div>
 
                     <%--<div class="input-group  input-group-sm mb-2">
                           <div class="input-group-prepend">
@@ -323,10 +323,10 @@
                  return false;
              }
              document.getElementById("txt_flag").value = "0";
-             //if (($.trim($('#drp_PartnerDepthStructure').val()) == '')) {
-             //    alert('Partner Depth Structure can not be left blank');
-             //    return false;
-             //}
+             if (($.trim($('#drp_PartnerDepthStructure').val()) == '')) {
+                 alert('Partner Depth Structure can not be left blank');
+                 return false;
+             }
              //if (($.trim($('#txt_Original_oe_booking_year').val()) == '')) {
              //    alert('original Booking Year can not be left blank');
              //    return false;
@@ -356,7 +356,7 @@
            $("#drp_ProfitCenter").val($("#drp_ProfitCenter option:first").val());
            $("#drp_GCK").val($("#drp_GCK option:first").val());
            $("#drp_tradingpartner").val($("#drp_tradingpartner option:first").val());
-           //$("#drp_PartnerDepthStructure").val($("#drp_PartnerDepthStructure option:first").val());
+           $("#drp_PartnerDepthStructure").val($("#drp_PartnerDepthStructure option:first").val());
            $("#drp_CPM").val($("#drp_CPM option:first").val());
            txt_Project
            document.getElementById("txt_ProjectName").value = "";

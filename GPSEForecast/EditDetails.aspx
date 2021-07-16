@@ -27,6 +27,9 @@
         <asp:Label CssClass="ml-5" ID="Label1" runat="server" Text="Project : "></asp:Label> <asp:Label CssClass="ml-5" ID="lbl_Proj" runat="server"></asp:Label>
             
             <asp:Label CssClass="ml-5" ID="Label2" runat="server" Text="Project Name : "></asp:Label> <asp:Label ID="lbl_ProjName"  CssClass="ml-5" runat="server"></asp:Label>
+
+            <asp:Label CssClass="ml-5" ID="Label3" runat="server" Text="Period : "></asp:Label> <asp:Label ID="lbl_Period"  CssClass="ml-5" runat="server"></asp:Label>
+
             <br />
 
 
@@ -71,24 +74,32 @@
                         <asp:ListItem value="Dec">Dec</asp:ListItem>
                       </asp:DropDownList>
                   </div>
+
                     
                     <div class="input-group  input-group-sm mb-2">
                       <div class="input-group-prepend">
-                        <div class="input-group-text">Order</div>
+                        <div class="input-group-text">Sales</div>
                       </div>
-                      <asp:TextBox CssClass="form-control form-control-sm" runat="server" ID="txt_order"></asp:TextBox>
+                      <asp:TextBox CssClass="form-control form-control-sm" runat="server" Text="0" ID="txt_order"></asp:TextBox>
                     </div>
                     <div class="input-group  input-group-sm mb-2">
                       <div class="input-group-prepend">
                         <div class="input-group-text">Cost</div>
                       </div>
-                      <asp:TextBox CssClass="form-control form-control-sm" runat="server" ID="txt_Cost"></asp:TextBox>
+                      <asp:TextBox CssClass="form-control form-control-sm" runat="server" Text="0" ID="txt_Cost"></asp:TextBox>
                     </div>
                     <div class="input-group  input-group-sm mb-2">
                       <div class="input-group-prepend">
                         <div class="input-group-text">Accruals</div>
                       </div>
-                      <asp:TextBox CssClass="form-control form-control-sm" runat="server" ID="txt_accrual"></asp:TextBox>
+                      <asp:TextBox CssClass="form-control form-control-sm" runat="server" Text="0" ID="txt_accrual"></asp:TextBox>
+                    </div>
+
+                <div class="input-group  input-group-sm mb-2">
+                      <div class="input-group-prepend">
+                        <div class="input-group-text">Margin</div>
+                      </div>
+                      <asp:TextBox CssClass="form-control form-control-sm" runat="server" Text="0" ID="txt_margin"></asp:TextBox>
                     </div>
 
                     <div class="input-group input-group-sm mb-2">
@@ -101,9 +112,41 @@
         </div>
     </div>
     </form>
-
+        
+        
         <script>
-       
+
+            $('#txt_margin').prop("readonly", true);
+
+            $('#txt_order').change(function () {
+
+                $('#txt_margin').prop("readonly", false);
+                $('#txt_margin').val(($('#txt_order').val() - $('#txt_Cost').val() - $('#txt_accrual').val()));
+                $('#txt_margin').prop("readonly", true);
+
+
+            });
+
+            $('#txt_accrual').change(function () {
+
+                $('#txt_margin').prop("readonly", false);
+                $('#txt_margin').val(($('#txt_order').val() - $('#txt_Cost').val() - $('#txt_accrual').val()));
+                $('#txt_margin').prop("readonly", true);
+
+            });
+
+            $('#txt_Cost').change(function () {
+
+                $('#txt_margin').prop("readonly", false);
+                $('#txt_margin').val(($('#txt_order').val() - $('#txt_Cost').val() - $('#txt_accrual').val()));
+                $('#txt_margin').prop("readonly", true);
+
+            });
+
+
+
+
+
             $('#btn_Save').click(function () {
 
         
