@@ -21,7 +21,7 @@
     <div class="row">
 
         
-                         <asp:Button ID="btn_goBack" runat="server" class="btn btn-outline-primary btn-sm" Text="Go Back" OnClick="btn_goBack_Click" ></asp:Button>
+                         <asp:Button ID="btn_goBack" runat="server" class="btn button-color-1 btn-sm" Text="Go Back" OnClick="btn_goBack_Click" ></asp:Button>
                     
 
         <asp:Label CssClass="ml-5" ID="Label1" runat="server" Text="Project : "></asp:Label> <asp:Label CssClass="ml-5" ID="lbl_Proj" runat="server"></asp:Label>

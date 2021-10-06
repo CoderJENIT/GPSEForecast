@@ -9,8 +9,8 @@
     align-items:center;
     width:100%;
     font-family: 'Montserrat', sans-serif;
-    border-color:rgb(0,153,153);
-    color:rgb(0,153,153);
+    border-color:#4d217a;
+    color:#4d217a;
 }
 
 .fonts-icon{
@@ -24,7 +24,7 @@
     width:30px;
     border-radius:50%;
     margin-right:15px;
-    background-color:rgb(0,153,153);
+    background-color:#4d217a;
     display:flex;
     justify-content:center;
     align-items:center;
@@ -34,7 +34,7 @@
 .form-control{
     border-top-right-radius:20px !important;
     border-bottom-right-radius:20px !important;
-    border-color:rgb(0,153,153);
+    border-color:#4d217a;
 }
 
 .input-group{
@@ -74,7 +74,7 @@
 .admin-button{
     height:60px;
     width:200px;
-    background-color:rgb(0,153,153);
+    background-color:#4d217a;
     color:white;
     border:none;
     border-radius:12px;
@@ -111,8 +111,8 @@
     margin-top:30px;
 }
 
-.btn-save{
-    background-color:#00a403;
+.btn-save {
+    background-color: #4d217a;
 }
 
 .btn-cancel{
@@ -123,11 +123,52 @@
     background-color:#343434;
 }
 
-.proj-label{
-    font-size:20px;
-    font-weight:500;
-    text-align:center;
-    padding-left:20px;
-    text-transform:uppercase;
-    color:rgb(19, 92, 92);
+.proj-label {
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+    padding-left: 20px;
+    text-transform: uppercase;
+    color: #4d217a;
+}
+
+.button-color {
+    color: #4d217a;
+    font-family: 'Montserrat', sans-serif;
+    border-color: #4d217a;
+
+}
+
+    .button-color:hover {
+        color: white;
+        font-family: 'Montserrat', sans-serif;
+        border-color: #4d217a;
+        background-color: #4d217a;
+    }
+
+    .button-color:disabled {
+        color: #4d217a;
+        font-family: 'Montserrat', sans-serif;
+        border-color: #4d217a;
+    }
+
+        .button-color:disabled:hover {
+            color: white;
+            font-family: 'Montserrat', sans-serif;
+            border-color: #4d217a;
+            background-color: #4d217a;
+        }
+
+.button-color-1 {
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    border-color: #4d217a;
+    background-color: #4d217a;
+}
+
+.button-color-1:hover {
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    border-color: #4d217a;
+    background-color: #5d17a4;
 }

@@ -17,7 +17,7 @@
 <body>
     <form id="form1" runat="server">
         <div class="container">
-            <a class="btn btn-primary mt-5" href="HomePage.aspx">Go Back
+            <a class="btn button-color-1 mt-5" href="HomePage.aspx">Go Back
             </a>
             <div class="head-box">
                 <h1 class="admin-head">Admin panel</h1>
@@ -105,7 +105,7 @@
 
 
                     <div class="modal-footer">
-                        <asp:Button ID="btn_proceed" Class="btn btn-primary" runat="server" Text="Proceed" OnClick="carry_button_Click" />
+                        <asp:Button ID="btn_proceed" Class="btn button-color-1" runat="server" Text="Proceed" OnClick="carry_button_Click" />
 
                     </div>
 
@@ -172,7 +172,7 @@
                     </div>
 
                     <div class="modal-footer">
-                        <asp:Button ID="Delete_button" Class="btn btn-primary" runat="server" Text="Proceed" OnClick="Delete_button_Click" />
+                        <asp:Button ID="Delete_button" Class="btn button-color-1" runat="server" Text="Proceed" OnClick="Delete_button_Click" />
                     </div>
 
 
@@ -190,7 +190,7 @@
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title">Upload Excel</h5>
-        <asp:Button ID="bt_DowloadTemplate" runat="server" CssClass="btn-primary ml-5" Text="Download Template" OnClick="bt_DowloadTemplate_Click" />
+        <asp:Button ID="bt_DowloadTemplate" runat="server" CssClass="btn button-color-1 ml-5" Text="Download Template" OnClick="bt_DowloadTemplate_Click" />
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -203,7 +203,7 @@
       </div>
       <div class="modal-footer">
           
-          <asp:Button ID="bt_UploadTemplate" runat="server" CssClass="btn-primary" Text="Upload Template" OnClick="bt_UploadTemplate_Click" />
+          <asp:Button ID="bt_UploadTemplate" runat="server" CssClass="btn button-color-1" Text="Upload Template" OnClick="bt_UploadTemplate_Click" />
       </div>
     </div>
   </div>

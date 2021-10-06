@@ -36,7 +36,7 @@
     <form id="form1" runat="server">
         <div class="container">
             
-            <asp:Button runat="server" class="btn btn-primary mb-3 mt-2" Text="Go Back" ID="btn_goback" OnClick="btn_goback_Click"></asp:Button>
+            <asp:Button runat="server" class="btn button-color-1 mb-3 mt-2" Text="Go Back" ID="btn_goback" OnClick="btn_goback_Click"></asp:Button>
 
             <asp:Label CssClass="ml-5" ID="Label1" runat="server" Text="Project : "></asp:Label> <asp:Label CssClass="ml-5" ID="lbl_Proj" runat="server"></asp:Label>
             
@@ -877,7 +877,7 @@
 
             var cost = parseFloat($(this).closest('.row').find('.Cost').val()) || 0
 
-            var acc = parseFloat($(this).closest('.row').find('.Accural').val()) || 0
+            var acc = parseFloat($(this).closest('.row').find('.Accurals').val()) || 0
 
             //alert(parseInt(($('.Sales').val())) - parseInt($('.Cost').val()) - parseInt($('.Accural').val() || 0) );
             $('.Margin').prop("readonly", false);
@@ -889,19 +889,19 @@
 
             var cost = parseFloat($(this).closest('.row').find('.Cost').val()) || 0
 
-            var acc = parseFloat($(this).closest('.row').find('.Accural').val()) || 0
+            var acc = parseFloat($(this).closest('.row').find('.Accurals').val()) || 0
 
             //alert(parseInt(($('.Sales').val())) - parseInt($('.Cost').val()) - parseInt($('.Accural').val() || 0) );
             $('.Margin').prop("readonly", false);
             $(this).closest('.row').find('.Margin').val(sal - cost - acc);
             $('.Margin').prop("readonly", true);
         });
-        $('.Accural').change(function () {
+        $('.Accurals').change(function () {
             var sal = parseFloat($(this).closest('.row').find('.Sales').val()) || 0
 
             var cost = parseFloat($(this).closest('.row').find('.Cost').val()) || 0
 
-            var acc = parseFloat($(this).closest('.row').find('.Accural').val()) || 0
+            var acc = parseFloat($(this).closest('.row').find('.Accurals').val()) || 0
 
             //alert(parseInt(($('.Sales').val())) - parseInt($('.Cost').val()) - parseInt($('.Accural').val() || 0) );
             $('.Margin').prop("readonly", false);

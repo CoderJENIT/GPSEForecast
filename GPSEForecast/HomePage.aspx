@@ -125,17 +125,17 @@
                  <asp:TextBox runat="server" ID="txt_flag"  rows="2" style="display:none"></asp:TextBox>
                     <div class="row">
                         <div class="col-md-3">
-                             <asp:Button ID="btn_submit1" runat="server" class="btn btn-outline-primary btn-sm btn-block mb-2" Text="Submit" OnClick="btn_submit1_Click" ></asp:Button>
+                             <asp:Button ID="btn_submit1" runat="server" class="btn btn-outline-primary btn-sm btn-block mb-2 button-color" Text="Submit" OnClick="btn_submit1_Click" ></asp:Button>
                         </div>
                         <div class="col-md-3">
-                            <asp:Button ID="btn_Add" runat="server" class="btn btn-outline-primary btn-sm btn-block mb-2" Text="Add New" OnClick="btn_Add_Click"></asp:Button>
+                            <asp:Button ID="btn_Add" runat="server" class="btn btn-sm btn-block mb-2 button-color" Text="Add New" OnClick="btn_Add_Click"></asp:Button>
                         </div>
                         <div class="col-md-3">                
-                            <asp:Button  ID="btn_edit" runat="server" class="btn btn-outline-primary btn-sm btn-block mb-2" Text="View / Edit Details" OnClick="btn_edit_Click"></asp:Button>
+                            <asp:Button  ID="btn_edit" runat="server" class="btn btn-sm btn-block mb-2 button-color" Text="View / Edit Details" OnClick="btn_edit_Click"></asp:Button>
                         </div>            
                         <div class="col-md-3 mb-2">
                             <div class="fonts-icon">
-                                <asp:Button ID="OTP_button" class="btn btn-primary btn-block" runat="server" Text="Admin Panel"  OnClick="OTP_button_Click" />
+                                <asp:Button ID="OTP_button" class="btn btn-primary btn-block button-color" runat="server" Text="Admin Panel"  OnClick="OTP_button_Click" />
                             </div>
                         </div>
                     </div>    
@@ -214,7 +214,7 @@
       </div>
       <div class="modal-footer">
         <asp:Button runat="server" ID="bt_DowloadTemplate" type="button" class="btn btn-secondary" Text="Download Template" OnClick="bt_DowloadTemplate_Click"></asp:Button>
-        <asp:Button runat="server" ID="bt_UploadTemplate" type="button" class="btn btn-primary" Text="Upload Excel" OnClick="bt_UploadTemplate_Click"></asp:Button>
+        <asp:Button runat="server" ID="bt_UploadTemplate" type="button" class="btn button-color-1" Text="Upload Excel" OnClick="bt_UploadTemplate_Click"></asp:Button>
       </div>
     </div>
   </div>
