@@ -34,7 +34,15 @@ namespace GPSEForecast
                     mo = mo + 3;
                 }
                 string mo1 = mo.ToString();
-                int mo3 = mo - 1;
+                int mo3;
+                if (mo == 1)
+                {
+                    mo3 = 12;
+                }
+                else
+                {
+                    mo3 = mo - 1;
+                }
                 string mo2 = mo3.ToString();
 
                 ddl_Month.Items.Insert(0, new ListItem(mo1, mo1));
@@ -137,6 +145,7 @@ namespace GPSEForecast
         protected void Delete_button_Click(object sender, EventArgs e)
         {
             DelDetails();
+            Response.Write("<script>alert('Delete data completed Successfully')</script>");
         }
 
         protected void bt_DowloadTemplate_Click(object sender, EventArgs e)

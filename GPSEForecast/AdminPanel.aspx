@@ -96,7 +96,7 @@
                         <div class="row">
                             <div class="col-md-2"></div>
                             <div class="col-md-8">
-                                <b>Note:</b><br />  Please select the month, the data will automatically be carry forwarded from the previous one.
+                                <b>Note:</b><br /> The data will be carry forwaded to the selected period from the previous one.
                             </div>
                             <div class="col-md-2"></div>
                         </div>
