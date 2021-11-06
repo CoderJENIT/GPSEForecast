@@ -29,19 +29,15 @@
                     </div>
                 </div>--%>
                 <div class="col-md"></div>
-                <div class="col-md-3">
-                    <div class="button-details">
-                        <button type="button" id="carry_button" class="admin-button" data-toggle="modal" data-target="#carry-over">Carry Over</button>
-                    </div>
-                </div>
 
-                <div class="col-md-3">
+
+                <div class="col-md-4">
                     <div class="button-details">
                         <button type="button" id="del_button" class="admin-button" data-toggle="modal" data-target="#delete-details">Delete Details</button>
                     </div>
                 </div>
 
-                <div class="col-md-3">
+                <div class="col-md-4">
                     <div class="button-details">
                         <button type="button" id="mapping_button" class="admin-button" data-toggle="modal" data-target="#mapping-details">Mapping Details</button>
                     </div>
@@ -52,68 +48,6 @@
         </div>
 
 
-        <%--Carry Over Modal--%>
-
-        <div class="modal fade carry-modal" id="carry-over" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title">Do You Want to Proceed ?</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-
-                    <div class="modal-body">
-                        <div class="row">
-                            <div class="col-md-2"></div>
-                            <div class="col-md-4">
-                                <br />
-                                <div class="input-group  input-group-sm mb-2">
-                                    <div class="input-group-prepend">
-                                        <div class="input-group-text">FY</div>
-                                    </div>
-                                    <asp:DropDownList ID="ddl_FY" CssClass="ddl dropdown-year" runat="server">
-                                    </asp:DropDownList>
-                                </div>
-                                <br />
-                            </div>
-                            <div class="col-md-4">
-                                <br />
-                                <div class="input-group  input-group-sm mb-2">
-                                    <div class="input-group-prepend">
-                                        <div class="input-group-text">Period</div>
-                                    </div>
-                                    <asp:DropDownList ID="ddl_Month" CssClass="ddl dropdown-month" runat="server">
-                                    </asp:DropDownList>
-                                </div>
-
-
-                            </div>
-                            <div class="col-md-2"></div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-md-2"></div>
-                            <div class="col-md-8">
-                                <b>Note:</b><br /> The data will be carry forwaded to the selected period from the previous one.
-                            </div>
-                            <div class="col-md-2"></div>
-                        </div>
-
-                    </div>
-
-
-                    <div class="modal-footer">
-                        <asp:Button ID="btn_proceed" Class="btn button-color-1" runat="server" Text="Proceed" OnClick="carry_button_Click" />
-
-                    </div>
-
-
-
-                </div>
-            </div>
-        </div>
 
 
         <%--Delete Details Modal--%>
@@ -131,40 +65,21 @@
                     <div class="modal-body">
                         <div class="row">
                             <div class="col-md-2"></div>
-                            <div class="col-md-4">
+                            <div class="col-md-8">
                                 <br />
                                 <div class="input-group  input-group-sm mb-2">
                                     <div class="input-group-prepend">
-                                        <div class="input-group-text">FY</div>
+                                        <div class="input-group-text">version</div>
                                     </div>
-                                    <asp:DropDownList ID="ddl_FY_del" CssClass="ddl dropdown-year" runat="server">
+
+                                    <asp:DropDownList class="form-control" ID="ddl_Ver" runat="server">
+                                        <asp:ListItem>Select</asp:ListItem>
+                                        <asp:ListItem>Version - 01</asp:ListItem>
+                                        <asp:ListItem>Version - 02</asp:ListItem>
+                                        <asp:ListItem>Version - 03</asp:ListItem>
                                     </asp:DropDownList>
                                 </div>
                                 <br />
-                            </div>
-                            <div class="col-md-4">
-                                <br />
-                                <div class="input-group  input-group-sm mb-2">
-                                    <div class="input-group-prepend">
-                                        <div class="input-group-text">Period</div>
-                                    </div>
-                                    <asp:DropDownList ID="ddl_Period_del" CssClass="ddl dropdown-month" runat="server">
-                                        <asp:ListItem>1</asp:ListItem>
-                                        <asp:ListItem>2</asp:ListItem>
-                                        <asp:ListItem>3</asp:ListItem>
-                                        <asp:ListItem>4</asp:ListItem>
-                                        <asp:ListItem>5</asp:ListItem>
-                                        <asp:ListItem>6</asp:ListItem>
-                                        <asp:ListItem>7</asp:ListItem>
-                                        <asp:ListItem>8</asp:ListItem>
-                                        <asp:ListItem>9</asp:ListItem>
-                                        <asp:ListItem>10</asp:ListItem>
-                                        <asp:ListItem>11</asp:ListItem>
-                                        <asp:ListItem>12</asp:ListItem>
-                                    </asp:DropDownList>
-                                </div>
-
-
                             </div>
                             <div class="col-md-2"></div>
                         </div>
@@ -186,31 +101,44 @@
 
 
         <div class="modal fade" id="mapping-details" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">Upload Excel</h5>
-        <asp:Button ID="bt_DowloadTemplate" runat="server" CssClass="btn button-color-1 ml-5" Text="Download Template" OnClick="bt_DowloadTemplate_Click" />
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Upload Excel</h5>
+                        <asp:Button ID="bt_DowloadTemplate" runat="server" CssClass="btn button-color-1 ml-5" Text="Download Template" OnClick="bt_DowloadTemplate_Click" />
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
 
-      <div class="modal-body">
-          <div class="input-group">              
-             <asp:FileUpload ID="UploadDoc" CssClass="form-control" runat="server" />
-          </div>
-      </div>
-      <div class="modal-footer">
-          
-          <asp:Button ID="bt_UploadTemplate" runat="server" CssClass="btn button-color-1" Text="Upload Template" OnClick="bt_UploadTemplate_Click" />
-      </div>
-    </div>
-  </div>
-</div>
+                    <div class="modal-body">
+                        <div class="input-group">
+                            <asp:FileUpload ID="UploadDoc" CssClass="form-control" runat="server" />
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+
+                        <asp:Button ID="bt_UploadTemplate" runat="server" CssClass="btn button-color-1" Text="Upload Template" OnClick="bt_UploadTemplate_Click" />
+                    </div>
+                </div>
+            </div>
+        </div>
 
 
 
     </form>
+
+
+    <script>
+        $('#Delete_button').click(function () {
+
+            alert($('#ddl_Ver').val());
+
+            if ($('#ddl_Ver').val() == 'Select') {
+                alert("Please select version to delete");
+                return false;
+            }
+        });
+    </script>
 </body>
 </html>

@@ -78,13 +78,13 @@ namespace GPSEForecast
         protected global::System.Web.UI.WebControls.Label Label3;
 
         /// <summary>
-        /// lbl_Period control.
+        /// lbl_Version control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbl_Period;
+        protected global::System.Web.UI.WebControls.Label lbl_Version;
 
         /// <summary>
         /// Button1 control.

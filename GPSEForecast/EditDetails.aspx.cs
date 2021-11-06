@@ -23,7 +23,7 @@ namespace GPSEForecast
             {
                 lbl_Proj.Text = Request.QueryString["Project"];
                 lbl_ProjName.Text = Request.QueryString["ProjectName"];
-                getMoth();
+                lbl_Version.Text = Request.QueryString["Version"];
             }
 
         }
@@ -31,7 +31,8 @@ namespace GPSEForecast
         protected void btn_goBack_Click(object sender, EventArgs e)
         {
             string proj = Request.QueryString["project"];
-            Response.Redirect("HomePage.aspx?Project=" + proj);
+            string version = Request.QueryString["Version"];
+            Response.Redirect("HomePage.aspx?Project=" + proj + "&Version=" + version);
 
         }
 
@@ -89,31 +90,6 @@ namespace GPSEForecast
 
         }
 
-        public List<String> getMoth()
-        {
-
-
-            int mo = int.Parse(DateTime.Now.Month.ToString());
-            if (mo > 9)
-            {
-                mo = mo - 9;
-            }
-            else
-            {
-                mo = mo + 3;
-            }
-            string mo1 = mo.ToString();
-
-            lbl_Period.Text = mo1;
-
-            var getMoth = new List<string>()
-                    {
-                        mo1
-
-                    };
-
-            return getMoth;
-        }
 
     }
 }

@@ -28,6 +28,7 @@ namespace GPSEForecast
                 drp_ProjectName.Visible = false;
 
                 string proj = Request.QueryString["project"];
+                string Version = Request.QueryString["version"];
                 LoadDropdowns();
                 getCountry();
                 if (!string.IsNullOrEmpty(proj))
@@ -38,6 +39,7 @@ namespace GPSEForecast
                     DataTable dt = new DataTable();
                     SqlCommand cmd = new SqlCommand("sp_getDataByProj", con);
                     cmd.Parameters.AddWithValue("@proj", proj);
+                    cmd.Parameters.AddWithValue("@version", Version);
                     //cmd.Parameters.AddWithValue("@gid", Session["UserName"].ToString());
                     //cmd.Parameters.AddWithValue("@fy", Session["Year"].ToString());
                     //cmd.Parameters.AddWithValue("@mon", Session["Month"].ToString());
@@ -51,6 +53,7 @@ namespace GPSEForecast
                           //  drp_CPM.SelectedItem.Value = (read["CPM"].ToString());
 
                             txt_Project.Text = proj;
+                            txt_version.Text = Version;
                             txt_ProjectName.Text = (read["Project Name"].ToString());
                             txt_comments.Text = (read["Comments"].ToString());
                             drp_GCK.SelectedValue = (read["GCK"].ToString());
@@ -72,31 +75,8 @@ namespace GPSEForecast
                         con.Close();
                     }
                 }
+                              
 
-                
-                ddl_FY.Items.Insert(0, new ListItem(GetCurrentYear(), GetCurrentYear()));
-               
-                if (!string.IsNullOrEmpty(GetNextYear()))
-                {
-                    ddl_FY.Items.Insert(1, new ListItem(GetNextYear(), GetNextYear()));
-                }
-
-                int mo = int.Parse(DateTime.Now.Month.ToString());
-                if (mo > 9)
-                {
-                    mo = mo - 9;
-                }
-                else
-                {
-                    mo = mo + 3;
-                }
-                string mo1 = mo.ToString();
-                int mo3 = mo + 1;
-                string mo2 = mo3.ToString();
-
-                ddl_Month.Items.Insert(0, new ListItem(mo1, mo1));
-
-                ddl_Month.Items.Insert(1, new ListItem(mo2, mo2));
 
                 //      getCountry();
                 string d = drp_CPM.SelectedItem.Value;
@@ -143,6 +123,8 @@ namespace GPSEForecast
             drp_PartnerDepthStructure.DataSource = returnDrp("Partner_Depth_Structure");
             drp_PartnerDepthStructure.DataBind();
             drp_PartnerDepthStructure.Items.Insert(0, new ListItem("Partner Depth Structure", ""));
+
+
 
             //drp_Project.DataSource = returnDrp("Project");
             //drp_Project.DataBind();
@@ -239,11 +221,11 @@ namespace GPSEForecast
 
             if ((!string.IsNullOrEmpty(drp_Project.SelectedItem.Value)) && (drp_Project.SelectedItem.Value != ""))
             {
-                Response.Redirect("LineDetails.aspx?Project=" + drp_Project.SelectedItem.Value + "&ProjectName=" + txt_ProjectName.Text.Replace("&", "%26"));
+                Response.Redirect("LineDetails.aspx?Project=" + drp_Project.SelectedItem.Value + "&ProjectName=" + txt_ProjectName.Text.Replace("&", "%26") + "&Version=" + txt_version.Text.Replace("&","%26"));
             }
             else if ((!string.IsNullOrEmpty(txt_Project.Text)) && (txt_Project.Text != ""))
             {
-                Response.Redirect("LineDetails.aspx?Project=" + txt_Project.Text + "&ProjectName=" + txt_ProjectName.Text.Replace("&", "%26"));
+                Response.Redirect("LineDetails.aspx?Project=" + txt_Project.Text + "&ProjectName=" + txt_ProjectName.Text.Replace("&", "%26") + "&Version=" + txt_version.Text.Replace("&", "%26"));
             }
         }
 
@@ -256,11 +238,11 @@ namespace GPSEForecast
 
             if ((!string.IsNullOrEmpty(drp_Project.SelectedItem.Value)) && (drp_Project.SelectedItem.Value != ""))
             {
-                Response.Redirect("EditDetails.aspx?Project=" + drp_Project.SelectedItem.Value + "&ProjectName=" + txt_ProjectName.Text.Replace("&", "%26"));
+                Response.Redirect("EditDetails.aspx?Project=" + drp_Project.SelectedItem.Value + "&ProjectName=" + txt_ProjectName.Text.Replace("&", "%26") + "&Version=" + txt_version.Text.Replace("&", "%26"));
             }
             else if ((!string.IsNullOrEmpty(txt_Project.Text)) && (txt_Project.Text!=""))
             {
-                Response.Redirect("EditDetails.aspx?Project=" + txt_Project.Text + "&ProjectName=" + txt_ProjectName.Text.Replace("&", "%26"));
+                Response.Redirect("EditDetails.aspx?Project=" + txt_Project.Text + "&ProjectName=" + txt_ProjectName.Text.Replace("&", "%26") + "&Version=" + txt_version.Text.Replace("&", "%26"));
             }
         }
 
@@ -309,6 +291,7 @@ namespace GPSEForecast
                 cmd.Parameters.AddWithValue("@tp", drp_tradingpartner.SelectedItem.Value);
                 cmd.Parameters.AddWithValue("@partnerpc", drp_PartnerDepthStructure.SelectedItem.Value);
                 cmd.Parameters.AddWithValue("@cmt", txt_comments.Text);
+                cmd.Parameters.AddWithValue("@version", txt_version.Text);
 
                 cmd.CommandType = System.Data.CommandType.StoredProcedure;
                 con.Open();
@@ -352,8 +335,18 @@ namespace GPSEForecast
             using (SqlConnection con = new SqlConnection(conn))
             {
 
-                SqlCommand cmd = new SqlCommand("DownloadTemplate", con);
+                SqlCommand cmd = new SqlCommand("DownloadTemplate", con);               
                 cmd.CommandType = CommandType.StoredProcedure;
+
+                if(ddl_Ver.SelectedItem.Value == "Select")
+                {
+                    cmd.Parameters.AddWithValue("@version", null);
+                }
+                else
+                {
+                    cmd.Parameters.AddWithValue("@version", ddl_Ver.SelectedItem.Value);
+                }
+                
                 con.Open();
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
 
@@ -446,8 +439,7 @@ namespace GPSEForecast
                             SqlCommand cmd1 = new SqlCommand("sp_UploadDataFromTempToDump", con);                           
                             cmd1.CommandType = CommandType.StoredProcedure;
                             cmd1.Parameters.AddWithValue("@un", username);
-                            cmd1.Parameters.AddWithValue("@period", ddl_Month.SelectedItem.Value);
-                            cmd1.Parameters.AddWithValue("@year", ddl_FY.SelectedItem.Value);
+                            
                     //cmd1.ExecuteNonQuery();
                     // SqlDataReader rdr = cmd1.ExecuteReader();
 

@@ -30,12 +30,11 @@ namespace GPSEForecast
                 HideValues();
                 lbl_Proj.Text = Request.QueryString["Project"];
                 lbl_ProjName.Text = Request.QueryString["ProjectName"];
-
-                getMoth();
-
+                lbl_Version.Text = Request.QueryString["Version"];
             }
             getdata();
         }
+
 
         public void getdata()
         {
@@ -43,6 +42,7 @@ namespace GPSEForecast
 
 
             string proj = Request.QueryString["Project"];
+            string version = Request.QueryString["Version"];
             DataSet ds = new DataSet();
 
             using (SqlConnection con = new SqlConnection(conn))
@@ -51,6 +51,7 @@ namespace GPSEForecast
                 SqlCommand cmd = new SqlCommand("sp_getCostDataByProj", con);
                 cmd.CommandType = CommandType.StoredProcedure;
                 SqlParameter parameter = new SqlParameter("@proj", proj);
+                SqlParameter parameter1 = new SqlParameter("@version", version);
                 cmd.Parameters.Add(parameter);
 
 
@@ -767,41 +768,18 @@ namespace GPSEForecast
         {
             string proj = Request.QueryString["project"];
             string projNam = Request.QueryString["ProjectName"];
-            Response.Redirect("EditDetails.aspx?Project=" + proj + "&ProjectName=" + projNam);
+            string Version = Request.QueryString["Version"];
+            Response.Redirect("EditDetails.aspx?Project=" + proj + "&ProjectName=" + projNam + "&Version=" + Version);
         }
 
         protected void btn_goback_Click(object sender, EventArgs e)
         {
             string proj = Request.QueryString["project"];
-            Response.Redirect("HomePage.aspx?Project=" + proj);
+            string Version = Request.QueryString["Version"];
+            Response.Redirect("HomePage.aspx?Project=" + proj + "&Version=" + Version);
         }
 
 
-        public List<String> getMoth()
-        {
-
-
-            int mo = int.Parse(DateTime.Now.Month.ToString());
-            if (mo > 9)
-            {
-                mo = mo - 9;
-            }
-            else
-            {
-                mo = mo + 3;
-            }
-            string mo1 = mo.ToString();
-
-            lbl_Period.Text = mo1;
-
-            var getMoth = new List<string>()
-                    {
-                        mo1
-
-                    };
-
-            return getMoth;
-        }
 
     }
 }

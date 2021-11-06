@@ -36,13 +36,24 @@
     <form id="form1" runat="server">
         <div class="container">
             
-            <asp:Button runat="server" class="btn button-color-1 mb-3 mt-2" Text="Go Back" ID="btn_goback" OnClick="btn_goback_Click"></asp:Button>
+                        <asp:Button runat="server" class="btn button-color-1 mb-3 mt-2 btn-primary" Text="Go Back" ID="btn_goback" OnClick="btn_goback_Click"></asp:Button>
 
-            <asp:Label CssClass="ml-5" ID="Label1" runat="server" Text="Project : "></asp:Label> <asp:Label CssClass="ml-5" ID="lbl_Proj" runat="server"></asp:Label>
+            <div class="row">
+                <div class="col-md-3">
+                    <asp:Label CssClass="ml-3" ID="Label1" runat="server" Text="Project : "></asp:Label> <asp:Label CssClass="ml-2" ID="lbl_Proj" runat="server"></asp:Label>
+                </div>
+                <div class="col-md-6">
+                    <asp:Label CssClass="ml-3" ID="Label2" runat="server" Text="Project Name : "></asp:Label> <asp:Label ID="lbl_ProjName"  CssClass="ml-2" runat="server"></asp:Label>
+                </div>
+                <div class="col-md-3">
+                    <asp:Label CssClass="ml-3" ID="Label3" runat="server" Text="Version : "></asp:Label> <asp:Label ID="lbl_Version"  CssClass="ml-2" runat="server"></asp:Label>
+                </div>
+            </div>
+
+
             
-            <asp:Label CssClass="ml-5" ID="Label2" runat="server" Text="Project Name : "></asp:Label> <asp:Label ID="lbl_ProjName"  CssClass="ml-5" runat="server"></asp:Label>
 
-                        <asp:Label CssClass="ml-5" ID="Label3" runat="server" Text="Period : "></asp:Label> <asp:Label ID="lbl_Period"  CssClass="ml-5" runat="server"></asp:Label>
+                        
 
             <br />
             <br />

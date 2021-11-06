@@ -24,6 +24,15 @@ namespace GPSEForecast
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
+        /// txt_version control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txt_version;
+
+        /// <summary>
         /// drp_Project control.
         /// </summary>
         /// <remarks>
@@ -186,33 +195,6 @@ namespace GPSEForecast
         protected global::System.Web.UI.WebControls.TextBox OTP_box;
 
         /// <summary>
-        /// ddl_FY control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddl_FY;
-
-        /// <summary>
-        /// Label1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label1;
-
-        /// <summary>
-        /// ddl_Month control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddl_Month;
-
-        /// <summary>
         /// UploadDoc control.
         /// </summary>
         /// <remarks>
@@ -222,15 +204,6 @@ namespace GPSEForecast
         protected global::System.Web.UI.WebControls.FileUpload UploadDoc;
 
         /// <summary>
-        /// bt_DowloadTemplate control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button bt_DowloadTemplate;
-
-        /// <summary>
         /// bt_UploadTemplate control.
         /// </summary>
         /// <remarks>
@@ -238,5 +211,23 @@ namespace GPSEForecast
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button bt_UploadTemplate;
+
+        /// <summary>
+        /// ddl_Ver control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddl_Ver;
+
+        /// <summary>
+        /// bt_DowloadTemplate control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button bt_DowloadTemplate;
     }
 }

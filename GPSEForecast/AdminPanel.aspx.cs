@@ -20,35 +20,6 @@ namespace GPSEForecast
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!IsPostBack)
-            {
-                getFY();
-                getFYdelete();
-                int mo = int.Parse(DateTime.Now.Month.ToString());
-                if (mo > 9)
-                {
-                    mo = mo - 9;
-                }
-                else
-                {
-                    mo = mo + 3;
-                }
-                string mo1 = mo.ToString();
-                int mo3;
-                if (mo == 1)
-                {
-                    mo3 = 12;
-                }
-                else
-                {
-                    mo3 = mo - 1;
-                }
-                string mo2 = mo3.ToString();
-
-                ddl_Month.Items.Insert(0, new ListItem(mo1, mo1));
-
-                ddl_Month.Items.Insert(1, new ListItem(mo2, mo2));
-            }
 
             
         }
@@ -58,67 +29,10 @@ namespace GPSEForecast
             Response.Redirect("~/ViewDetails.aspx");
         }
 
-        protected void carry_button_Click(object sender, EventArgs e)
-        {
-            CarryOver();
-        }
-
-        public void CarryOver()
-        {
-            string username = Request.LogonUserIdentity.Name.ToString();
-            username = username.Remove(0, 6);
-
-            string cs = ConfigurationManager.ConnectionStrings["GPSEForecast"].ConnectionString;
-            using (SqlConnection con = new SqlConnection(cs))
-            {
-                SqlCommand cmd = new SqlCommand("CarryOver", con);
-                cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@gid", username);
-                cmd.Parameters.AddWithValue("@per", ddl_Month.SelectedItem.Value);
-                cmd.Parameters.AddWithValue("@fy", ddl_FY.SelectedItem.Value);
-
-                con.Open();
-                cmd.ExecuteNonQuery();
-                Response.Write("<script>alert('Carry Over Successfully')</script>");
-            }
-        }
 
 
-        public void getFY()
-        {
-            string cs = ConfigurationManager.ConnectionStrings["GPSEForecast"].ConnectionString;
-            using (SqlConnection con = new SqlConnection(cs))
-            {
-                SqlDataAdapter da = new SqlDataAdapter("getFYfromDump", con);
-                da.SelectCommand.CommandType = CommandType.StoredProcedure;
-                DataSet ds = new DataSet();
-                da.Fill(ds);
 
-                ddl_FY.DataSource = ds;
-                ddl_FY.DataValueField = "Year";
-                ddl_FY.DataTextField = "Year";
-                ddl_FY.DataBind();
 
-            }
-        }
-
-        public void getFYdelete()
-        {
-            string cs = ConfigurationManager.ConnectionStrings["GPSEForecast"].ConnectionString;
-            using (SqlConnection con = new SqlConnection(cs))
-            {
-                SqlDataAdapter da = new SqlDataAdapter("getFYfromDump", con);
-                da.SelectCommand.CommandType = CommandType.StoredProcedure;
-                DataSet ds = new DataSet();
-                da.Fill(ds);
-
-                ddl_FY_del.DataSource = ds;
-                ddl_FY_del.DataValueField = "Year";
-                ddl_FY_del.DataTextField = "Year";
-                ddl_FY_del.DataBind();
-
-            }
-        }
 
         public void DelDetails()
         {
@@ -128,8 +42,7 @@ namespace GPSEForecast
             {
                 SqlCommand cmd = new SqlCommand("sp_Delete_Details", con);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@per", ddl_Period_del.SelectedItem.Value);
-                cmd.Parameters.AddWithValue("@FY", ddl_FY_del.SelectedItem.Value);
+                cmd.Parameters.AddWithValue("@version", ddl_Ver.SelectedItem.Value);
 
                 con.Open();
                 cmd.ExecuteNonQuery();
