@@ -49,11 +49,11 @@ namespace GPSEForecast
             {
 
                 SqlCommand cmd = new SqlCommand("sp_getCostDataByProj", con);
-                cmd.CommandType = CommandType.StoredProcedure;
-                SqlParameter parameter = new SqlParameter("@proj", proj);
-                SqlParameter parameter1 = new SqlParameter("@version", version);
-                cmd.Parameters.Add(parameter);
+                cmd.Parameters.AddWithValue("@proj", proj);
+                cmd.Parameters.AddWithValue("@version", version);
 
+
+                cmd.CommandType = CommandType.StoredProcedure;
 
                 con.Open();
 

@@ -422,7 +422,28 @@ namespace GPSEForecast
 
                                 sqlBulkCopy.DestinationTableName = "DumpTemp";
 
-                                con.Open();
+                                sqlBulkCopy.ColumnMappings.Add("Version", "Version");
+                                sqlBulkCopy.ColumnMappings.Add("Project #", "Project #");
+                                sqlBulkCopy.ColumnMappings.Add("Project Name", "Project Name");
+                                sqlBulkCopy.ColumnMappings.Add("CPM", "CPM");
+                                sqlBulkCopy.ColumnMappings.Add("Revenue Method", "Revenue Method");
+                                sqlBulkCopy.ColumnMappings.Add("Profit Center", "Profit Center");
+                                sqlBulkCopy.ColumnMappings.Add("BF", "BF");
+                                sqlBulkCopy.ColumnMappings.Add("Trading Partner/Country", "Trading Partner/Country");
+                                sqlBulkCopy.ColumnMappings.Add("Partner DS", "Partner DS");
+                                sqlBulkCopy.ColumnMappings.Add("Backlog Status", "Backlog Status");
+                                sqlBulkCopy.ColumnMappings.Add("Act/FC", "Act/FC");
+                                sqlBulkCopy.ColumnMappings.Add("Booked value", "Booked value");
+                                sqlBulkCopy.ColumnMappings.Add("Sales to date", "Sales to date");
+                                sqlBulkCopy.ColumnMappings.Add("Backlog", "Backlog");
+                                sqlBulkCopy.ColumnMappings.Add("FY", "FY");
+                                sqlBulkCopy.ColumnMappings.Add("Month", "Month");
+                                sqlBulkCopy.ColumnMappings.Add("Sales", "Sales");
+                                sqlBulkCopy.ColumnMappings.Add("Costs", "Costs");
+                                sqlBulkCopy.ColumnMappings.Add("Accruals", "Accruals");
+                                sqlBulkCopy.ColumnMappings.Add("Margin", "Margin");
+
+                        con.Open();
                                 sqlBulkCopy.WriteToServer(dtExcelData);
                                 con.Close();
                             }

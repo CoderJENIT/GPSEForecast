@@ -136,6 +136,18 @@ namespace GPSEForecast
 
                         sqlBulkCopy.DestinationTableName = "tbl_Mapping_Temp";
 
+                        sqlBulkCopy.ColumnMappings.Add("Profit Center", "Profit Center");
+                        sqlBulkCopy.ColumnMappings.Add("Vertical", "Vertical");
+                        sqlBulkCopy.ColumnMappings.Add("Description", "Description");
+                        sqlBulkCopy.ColumnMappings.Add("GCK", "GCK");
+                        sqlBulkCopy.ColumnMappings.Add("Business Field", "Business Field");
+                        sqlBulkCopy.ColumnMappings.Add("Partner Depth Structure", "Partner Depth Structure");
+                        sqlBulkCopy.ColumnMappings.Add("CPM Name", "CPM Name");
+                        sqlBulkCopy.ColumnMappings.Add("Status", "Status");
+                        sqlBulkCopy.ColumnMappings.Add("Trading Partner/Country", "Trading Partner/Country");
+                        sqlBulkCopy.ColumnMappings.Add("Revenue Method", "Revenue Method");
+                        sqlBulkCopy.ColumnMappings.Add("Status Description", "Status Description");
+
                         con.Open();
                         sqlBulkCopy.WriteToServer(dtExcelData);
                         con.Close();

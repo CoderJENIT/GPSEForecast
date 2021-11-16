@@ -56,6 +56,7 @@ namespace GPSEForecast
                 cmd.Parameters.AddWithValue("@accural", txt_accrual.Text);
                 cmd.Parameters.AddWithValue("@margin", txt_margin.Text);
                 cmd.Parameters.AddWithValue("@comments", txt_notes.Text);
+                cmd.Parameters.AddWithValue("@version", lbl_Version.Text);
 
                 cmd.CommandType = System.Data.CommandType.StoredProcedure;
                 con.Open();
